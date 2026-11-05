@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# TODO: replace with the real sitemap URL after deployment, e.g. https://your-domain.example/sitemap.xml
+# Sitemap: https://your-domain.example/sitemap.xml

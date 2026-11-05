@@ -1,230 +1,434 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechTrick | Portfolio</title>
-    <meta name="description"
-        content="Professional portfolio showcasing services, skills, and projects over the latest tech stack.">
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afnan | Full-Stack Developer &amp; UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Afnan — Full-Stack Developer & UI/UX Designer offering presentation design, final year project support, poster design, website and mobile app development.">
+  <meta name="theme-color" content="#2563eb">
+  <!-- TODO: update canonical/OG URLs when the deployment URL is known. Do not invent a live URL. -->
+  <!-- <link rel="canonical" href="https://your-deployed-domain.example/"> -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Afnan | Full-Stack Developer & UI/UX Designer">
+  <meta property="og:description" content="Presentation design, final year project support, poster design, website and mobile app development by Afnan.">
+  <meta property="og:image" content="assets/images/profile.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Afnan | Full-Stack Developer & UI/UX Designer">
+  <meta name="twitter:description" content="Presentation design, final year project support, poster design, website and mobile app development by Afnan.">
+  <meta name="twitter:image" content="assets/images/profile.webp">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.emailjs.com https://*.emailjs.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Afnan",
+    "jobTitle": "Full-Stack Developer & UI/UX Designer",
+    "email": "mailto:muhammadafnrha@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ampara", "addressCountry": "LK" },
+    "sameAs": [
+      "https://www.linkedin.com/in/mohamed-afnan-2b6561388/",
+      "https://github.com/muhammadafnrha-source"
+    ]
+  }
+  </script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<body class="dark-theme">
-    <nav class="navbar" id="navbar">
-        <div class="logo">TechTrick<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo" aria-label="Afnan home">Afnan<span>.</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+      </button>
+      <button class="menu-toggle" id="mobileMenu" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- Header background shape -->
-    <div class="hero-bg"><img src="assets/bg.png" alt="Hero background"></div>
-    <div class="gradient-glow"></div>
-
+  <main id="main">
+    <!-- HERO -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h4 class="greeting">Hello, I'm</h4>
-            <h1 class="name">Afnaz</h1>
-            <h3 class="role">Transforming Ideas into <span class="highlight">Digital Reality</span></h3>
-            <p class="summary">I specialize in high-end design, advanced web development, and digital services with the
-                newest technology.</p>
-            <div class="hero-btns">
-                <a href="#services" class="btn primary-btn">My Services</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
+      <div class="hero-bg" aria-hidden="true"><img src="assets/images/bg.png" alt="" width="1200" height="800" decoding="async"></div>
+      <div class="hero-content">
+        <p class="greeting">Hello, I'm</p>
+        <h1 class="name">Afnan</h1>
+        <h2 class="role">Full-Stack Developer &amp; <span class="highlight">UI/UX Designer</span></h2>
+        <p class="summary">Transforming ideas into digital reality — high-end design, advanced web development, and digital services built with modern technology.</p>
+        <div class="hero-btns">
+          <a href="assets/documents/Afnan-CV.pdf" class="btn primary-btn" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
+          <a href="#contact" class="btn secondary-btn">Contact Me</a>
         </div>
-        <div class="hero-image">
-            <div class="image-wrapper">
-                <img src="assets/profile.webp" alt="Afnan Profile">
-                <div class="floating-badge badge-1"><i class="fa-solid fa-code"></i></div>
-                <div class="floating-badge badge-2"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            </div>
+        <div class="socials hero-socials" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/mohamed-afnan-2b6561388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://github.com/muhammadafnrha-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://wa.me/94754748478" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="mailto:muhammadafnrha@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
         </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="assets/images/profile.webp" alt="Portrait of Afnan" width="400" height="400" fetchpriority="high" decoding="async">
+          <div class="floating-badge badge-1" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+          <div class="floating-badge badge-2" aria-hidden="true"><i class="fa-brands fa-html5"></i></div>
+          <div class="floating-badge badge-3" aria-hidden="true"><i class="fa-brands fa-flutter"></i></div>
+        </div>
+      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="about-section">
-        <div class="section-title">
-            <h2>Personal <span>Information</span></h2>
-            <div class="underline"></div>
+      <div class="section-title reveal">
+        <h2>About <span>Me</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text reveal">
+          <p>I am a passionate developer and creative thinker focused on delivering high-end, dynamic websites and comprehensive digital services. With a keen eye for aesthetics and performance, I help clients bring their visions to life — from presentations and posters to websites and mobile applications.</p>
+          <p><strong>Career interests:</strong> full-stack web &amp; mobile development, UI/UX design, and digital services for academic and business clients.</p>
+          <p><strong>Professional goals:</strong> to build reliable, beautifully designed digital products and grow as a full-stack developer and designer.</p>
+          <div class="info-grid">
+            <div class="info-item"><span class="info-label">Name</span><span class="info-value">Afnan</span></div>
+            <div class="info-item"><span class="info-label">Experience</span><span class="info-value">2+ Years</span></div>
+            <div class="info-item"><span class="info-label">Role</span><span class="info-value">Full-Stack &amp; UX</span></div>
+            <div class="info-item"><span class="info-label">Location</span><span class="info-value">Srilanka, Ampara</span></div>
+            <div class="info-item"><span class="info-label">Email</span><span class="info-value">muhammadafnrha@gmail.com</span></div>
+            <div class="info-item"><span class="info-label">Phone</span><span class="info-value">+94 75 47 48 478</span></div>
+          </div>
+          <a href="assets/documents/Afnan-CV.pdf" class="btn primary-btn" download><i class="fa-solid fa-download" aria-hidden="true"></i> Download CV</a>
         </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I am a passionate developer and creative thinker based on delivering high-end, dynamic
-                    websites and comprehensive digital services. With a keen eye for aesthetics and performance, I help
-                    clients bring their visions to life.</p>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Name</span>
-                        <span class="info-value">Afnaz</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Experience</span>
-                        <span class="info-value">2+ Years</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Role</span>
-                        <span class="info-value">Full-Stack & UX</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Email</span>
-                        <span class="info-value">muhammadafnrha@gmail.com</span>
-                    </div>
-                </div>
-                <a href="#contact" class="btn primary-btn text-btn">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="skills-container">
-                <div class="skill-box">
-                    <div class="skill-name">
-                        <i class="fa-brands fa-html5"></i> Web Development
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-name">
-                        <i class="fa-brands fa-uikit"></i> UI/UX Design
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill-box">
-                    <div class="skill-name">
-                        <i class="fa-solid fa-mobile-screen"></i> Responsive Apps
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="skills-preview reveal" aria-label="Core strengths">
+          <h3>Core Strengths</h3>
+          <div class="skill-box">
+            <div class="skill-name"><span><i class="fa-brands fa-html5" aria-hidden="true"></i> Web Development</span><span class="skill-pct">95%</span></div>
+            <div class="progress-bar"><div class="progress" data-width="95" style="width:0%"></div></div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-name"><span><i class="fa-solid fa-pen-nib" aria-hidden="true"></i> UI/UX Design</span><span class="skill-pct">85%</span></div>
+            <div class="progress-bar"><div class="progress" data-width="85" style="width:0%"></div></div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-name"><span><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> Responsive Apps</span><span class="skill-pct">90%</span></div>
+            <div class="progress-bar"><div class="progress" data-width="90" style="width:0%"></div></div>
+          </div>
+          <p class="hint">See the full <a href="#skills">Skills</a> section for languages, frameworks and tools.</p>
         </div>
+      </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+      <div class="section-title reveal">
+        <h2>My <span>Skills</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+        <p class="subtitle">Languages, frameworks, databases and tools I work with. Bars show the proficiency values carried over from the previous version of this site; skills without published values are listed as tools rather than scored.</p>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-card"><i class="fa-brands fa-html5" aria-hidden="true"></i><h3>HTML</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><h3>CSS</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-js" aria-hidden="true"></i><h3>JavaScript</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-react" aria-hidden="true"></i><h3>React</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-flutter" aria-hidden="true"></i><h3>Flutter</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-code" aria-hidden="true"></i><h3>Dart</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-java" aria-hidden="true"></i><h3>Java</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-python" aria-hidden="true"></i><h3>Python</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-php" aria-hidden="true"></i><h3>PHP</h3></div>
+        <div class="skill-card"><i class="fa-brands fa-laravel" aria-hidden="true"></i><h3>Laravel</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-database" aria-hidden="true"></i><h3>MySQL</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-fire" aria-hidden="true"></i><h3>Firebase</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-server" aria-hidden="true"></i><h3>Database Management</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-table" aria-hidden="true"></i><h3>Excel</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><h3>Data Analysis</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-keyboard" aria-hidden="true"></i><h3>Data Entry</h3></div>
+        <div class="skill-card"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i><h3>UI/UX Design</h3></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
     <section id="services" class="services-section">
-        <div class="section-title">
-            <h2>My <span>Services</span></h2>
-            <div class="underline"></div>
-            <p class="subtitle">Cutting-edge solutions explicitly adapted for your business model.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
-                <h3>Presentation Creation</h3>
-                <p>Professional, high-impact presentations tailored for your audience, ensuring clear and engaging
-                    communication.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                <h3>Final Projects & IT Works</h3>
-                <p>End-to-end guidance and development for IT academic final projects and related practical system
-                    development.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                <h3>Ad Poster Creation</h3>
-                <p>Creative and eye-catching advertisement posters designed to capture attention and promote your brand
-                    effectively.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                <h3>Web Development</h3>
-                <p>Custom, scalable, and fully responsive websites built with the latest technologies and striking
-                    aesthetics.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                <h3>App Development</h3>
-                <p>Sleek, responsive, and cross-platform mobile applications that provide excellent user experiences on
-                    any device.</p>
-            </div>
-        </div>
+      <div class="section-title reveal">
+        <h2>My <span>Services</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+        <p class="subtitle">Cutting-edge solutions adapted for your business model.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-file-powerpoint" aria-hidden="true"></i></div>
+          <h3>Presentation Design</h3>
+          <p>Professional, high-impact presentations tailored for your audience, ensuring clear and engaging communication.</p>
+          <ul><li>Tailored to your audience</li><li>Clear structure &amp; design</li></ul>
+          <a class="btn secondary-btn service-cta" href="#contact" data-service="presentation">Get Started</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+          <h3>Final Year Project Support</h3>
+          <p>End-to-end guidance and development for IT academic final projects and related practical system development.</p>
+          <ul><li>Guidance &amp; development</li><li>Practical system builds</li></ul>
+          <a class="btn secondary-btn service-cta" href="#contact" data-service="final_project">Get Started</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
+          <h3>Advertisement Poster Design</h3>
+          <p>Creative, eye-catching advertisement posters designed to capture attention and promote your brand effectively.</p>
+          <ul><li>Brand-focused design</li><li>Attention-grabbing layouts</li></ul>
+          <a class="btn secondary-btn service-cta" href="#contact" data-service="ad_poster">Get Started</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+          <h3>Website Development</h3>
+          <p>Custom, scalable and fully responsive websites built with the latest technologies and striking aesthetics.</p>
+          <ul><li>Responsive &amp; modern</li><li>SEO-friendly structure</li></ul>
+          <a class="btn secondary-btn service-cta" href="#contact" data-service="web">Get Started</a>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+          <h3>Mobile Application Development</h3>
+          <p>Sleek, responsive and cross-platform mobile applications that provide an excellent user experience on any device.</p>
+          <ul><li>Cross-platform</li><li>Clean user experience</li></ul>
+          <a class="btn secondary-btn service-cta" href="#contact" data-service="app">Get Started</a>
+        </article>
+      </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section">
+      <div class="section-title reveal">
+        <h2>Featured <span>Projects</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+        <p class="subtitle">Selected development projects. Public links are shown only where they are available — full details are shared on request.</p>
+      </div>
+      <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter-btn" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+        <button class="filter-btn" type="button" data-filter="software" aria-pressed="false">Software</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <article class="project-card reveal" data-category="mobile" data-title="Fresh Delivery" data-status="In development — details on request">
+          <div class="project-cover cover-1" aria-hidden="true"><span>FD</span></div>
+          <div class="project-body">
+            <span class="project-tag">Mobile</span>
+            <h3>Fresh Delivery</h3>
+            <p>A delivery-focused application project. Full case study, screenshots and tech details are shared on request.</p>
+            <p class="project-status">Status: In development</p>
+            <div class="project-actions">
+              <button class="btn secondary-btn" type="button" data-open-modal="fresh-delivery">View Details</button>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="software" data-title="Aaseek" data-status="Case study available on request">
+          <div class="project-cover cover-2" aria-hidden="true"><span>A</span></div>
+          <div class="project-body">
+            <span class="project-tag">Software</span>
+            <h3>Aaseek</h3>
+            <p>A software project built as part of development work. Full case study and technical details are shared on request.</p>
+            <p class="project-status">Status: Case study on request</p>
+            <div class="project-actions">
+              <button class="btn secondary-btn" type="button" data-open-modal="aaseek">View Details</button>
+            </div>
+          </div>
+        </article>
+        <article class="project-card reveal" data-category="web" data-title="UNIQALBi" data-status="Case study available on request">
+          <div class="project-cover cover-3" aria-hidden="true"><span>U</span></div>
+          <div class="project-body">
+            <span class="project-tag">Web</span>
+            <h3>UNIQALBi</h3>
+            <p>A web project built as part of development work. Full case study and technical details are shared on request.</p>
+            <p class="project-status">Status: Case study on request</p>
+            <div class="project-actions">
+              <button class="btn secondary-btn" type="button" data-open-modal="uniqalbi">View Details</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="projects-note reveal">More work is available on request — no repository or demo links are shown where they are not publicly available.</p>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="section-title reveal">
+        <h2>Client <span>Testimonials</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+      </div>
+      <div class="testimonial-placeholder reveal" role="note">
+        <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+        <h3>No testimonials published yet</h3>
+        <p>This section is intentionally left as a placeholder — no reviews are shown until genuine client feedback is provided. Be the first to share your experience working with Afnan.</p>
+        <a href="#contact" class="btn primary-btn">Start a Project</a>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing-section">
+      <div class="section-title reveal">
+        <h2>Service <span>Pricing</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+        <p class="subtitle">Every project is scoped individually. Contact for a quote tailored to your requirements.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card reveal"><h3>Presentation Design</h3><p class="price">Contact for Pricing</p><ul><li>Custom design</li><li>Revisions as agreed</li></ul><a class="btn secondary-btn" href="#contact" data-service="presentation">Get a Quote</a></article>
+        <article class="price-card reveal"><h3>Poster Design</h3><p class="price">Contact for Pricing</p><ul><li>Brand-focused design</li><li>Print-ready output</li></ul><a class="btn secondary-btn" href="#contact" data-service="ad_poster">Get a Quote</a></article>
+        <article class="price-card reveal"><h3>Website Development</h3><p class="price">Contact for Pricing</p><ul><li>Responsive build</li><li>SEO basics included</li></ul><a class="btn secondary-btn" href="#contact" data-service="web">Get a Quote</a></article>
+        <article class="price-card reveal"><h3>Mobile App Development</h3><p class="price">Contact for Pricing</p><ul><li>Cross-platform</li><li>Clean UX</li></ul><a class="btn secondary-btn" href="#contact" data-service="app">Get a Quote</a></article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+      <div class="section-title reveal">
+        <h2>Frequently Asked <span>Questions</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">What services do you offer?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-answer"><p>Presentation design, final year project support, advertisement poster design, website development and mobile application development.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">How does project development work?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-answer"><p>Share your requirements through the contact form. We discuss scope, then begin work once the details are agreed.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">How long does delivery take?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-answer"><p>Timelines depend on the scope of each project and are confirmed individually before work begins.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">Do you offer revisions?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-answer"><p>Revisions are discussed and agreed per project so expectations are clear from the start.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">How much does it cost?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-answer"><p>Pricing is quoted per project — contact me for a tailored estimate.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">How do I get started?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+          <div class="faq-answer"><p>Send a message via the contact form, WhatsApp or email with your project details.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="contact-section">
-        <div class="section-title">
-            <h2>Registration / <span>Contact</span></h2>
-            <div class="underline"></div>
-            <p class="subtitle">Fill out the registration form to start our journey together.</p>
+      <div class="section-title reveal">
+        <h2>Contact <span>Me</span></h2>
+        <div class="underline" aria-hidden="true"></div>
+        <p class="subtitle">Fill out the form to start our journey together.</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info reveal">
+          <h3>Contact Information</h3>
+          <p>Currently available for freelance works and collaborations. If you have an application you want to develop, a problem to solve, or just want to say hi — send me a message.</p>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Srilanka, Ampara</li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:muhammadafnrha@gmail.com">muhammadafnrha@gmail.com</a></li>
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+94754748478">+94 75 47 48 478</a></li>
+          </ul>
+          <div class="socials" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/mohamed-afnan-2b6561388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="https://github.com/muhammadafnrha-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://wa.me/94754748478" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
         </div>
-
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>Currently available for freelance works and collaborations. If you have an application you want to
-                    develop, a problem to solve, or just want to say hi, send me a message.</p>
-                <ul class="contact-list">
-                    <li><i class="fa-solid fa-location-dot"></i> Srilanka,Ampara</li>
-                    <li><i class="fa-solid fa-envelope"></i> muhammadafnrha@gmail.com</li>
-                    <li><i class="fa-solid fa-phone"></i> +94 75 47 48 478</li>
-                </ul>
-                <div class="socials">
-                    <!-- உங்களது LinkedIn Username-ஐ இங்கு மாற்றவும் -->
-                    <a href="https://www.linkedin.com/in/mohamed-afnan-2b6561388/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-
-                    <!-- உங்களது GitHub Username-ஐ இங்கு மாற்றவும் -->
-                    <a href="https://github.com/muhammadafnrha-source" target="_blank"><i
-                            class="fa-brands fa-github"></i></a>
-
-                    <!-- உங்களது WhatsApp Number (Country Code உடன்) இணைக்கப்பட்டுள்ளது -->
-                    <a href="https://wa.me/94754748478" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
+        <div class="contact-form-container reveal">
+          <form id="contactForm" class="glass-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+              <span class="field-error" id="nameError" aria-live="polite"></span>
             </div>
-
-            <div class="contact-form-container">
-                <form id="contactForm" class="glass-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="service_type" required>
-                            <option value="">Select a Service</option>
-                            <option value="presentation">Presentation Creation</option>
-                            <option value="final_project">IT Final Projects</option>
-                            <option value="ad_poster">Ad Poster Creation</option>
-                            <option value="web">Web Development</option>
-                            <option value="app">App Development</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Project Details or Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn submit-btn">Submit Request <i
-                            class="fa-solid fa-paper-plane"></i></button>
-                    <div id="formStatus" class="form-status"></div>
-                </form>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <span class="field-error" id="emailError" aria-live="polite"></span>
             </div>
+            <div class="form-group">
+              <label for="service_type">Service</label>
+              <select id="service_type" name="service_type" required>
+                <option value="">Select a service</option>
+                <option value="presentation">Presentation Design</option>
+                <option value="final_project">Final Year Project Support</option>
+                <option value="ad_poster">Advertisement Poster Design</option>
+                <option value="web">Website Development</option>
+                <option value="app">Mobile App Development</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="field-error" id="serviceError" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project subject" required>
+              <span class="field-error" id="subjectError" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Project details or message" required></textarea>
+              <span class="field-error" id="messageError" aria-live="polite"></span>
+            </div>
+            <div class="form-group honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn primary-btn submit-btn" id="submitBtn">Submit Request <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
         </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="footer-content">
-            <h2>TechTrick<span>.</span></h2>
-            <p>High-End Design & Development</p>
-            <p class="copyright">&copy; 2026 TechTrick. All Rights Reserved.</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="footer-content">
+      <h2>Afnan<span>.</span></h2>
+      <p>Full-Stack Development &amp; UI/UX Design</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="socials footer-socials" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/mohamed-afnan-2b6561388/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://github.com/muhammadafnrha-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://wa.me/94754748478" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+      <p class="copyright">&copy; <span id="year">2026</span> Afnan. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <a class="whatsapp-float" href="https://wa.me/94754748478?text=Hello%20Afnan%2C%20I%27m%20interested%20in%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+  <!-- Project modal -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <button class="modal-close" type="button" id="modalClose" aria-label="Close project details"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <h3 id="modalTitle">Project</h3>
+      <p id="modalCategory"></p>
+      <p id="modalBody"></p>
+      <p id="modalStatus"></p>
+      <p class="modal-note">No public repository or live demo link is available for this project yet. Contact Afnan for the full case study.</p>
+      <a class="btn primary-btn" href="#contact">Request Case Study</a>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
-
 </html>
