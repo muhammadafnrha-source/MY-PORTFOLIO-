@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrick | Portfolio</title>
+    <meta name="description"
+        content="Professional portfolio showcasing services, skills, and projects over the latest tech stack.">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body class="dark-theme">
+    <nav class="navbar" id="navbar">
+        <div class="logo">TechTrick<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Header background shape -->
+    <div class="hero-bg"><img src="assets/bg.png" alt="Hero background"></div>
+    <div class="gradient-glow"></div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h4 class="greeting">Hello, I'm</h4>
+            <h1 class="name">Afnaz</h1>
+            <h3 class="role">Transforming Ideas into <span class="highlight">Digital Reality</span></h3>
+            <p class="summary">I specialize in high-end design, advanced web development, and digital services with the
+                newest technology.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn primary-btn">My Services</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <img src="assets/profile.webp" alt="Afnan Profile">
+                <div class="floating-badge badge-1"><i class="fa-solid fa-code"></i></div>
+                <div class="floating-badge badge-2"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-title">
+            <h2>Personal <span>Information</span></h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I am a passionate developer and creative thinker based on delivering high-end, dynamic
+                    websites and comprehensive digital services. With a keen eye for aesthetics and performance, I help
+                    clients bring their visions to life.</p>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Name</span>
+                        <span class="info-value">Afnaz</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Experience</span>
+                        <span class="info-value">2+ Years</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Role</span>
+                        <span class="info-value">Full-Stack & UX</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email</span>
+                        <span class="info-value">muhammadafnrha@gmail.com</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn primary-btn text-btn">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <div class="skill-name">
+                        <i class="fa-brands fa-html5"></i> Web Development
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">
+                        <i class="fa-brands fa-uikit"></i> UI/UX Design
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">
+                        <i class="fa-solid fa-mobile-screen"></i> Responsive Apps
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="section-title">
+            <h2>My <span>Services</span></h2>
+            <div class="underline"></div>
+            <p class="subtitle">Cutting-edge solutions explicitly adapted for your business model.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <h3>Presentation Creation</h3>
+                <p>Professional, high-impact presentations tailored for your audience, ensuring clear and engaging
+                    communication.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>Final Projects & IT Works</h3>
+                <p>End-to-end guidance and development for IT academic final projects and related practical system
+                    development.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                <h3>Ad Poster Creation</h3>
+                <p>Creative and eye-catching advertisement posters designed to capture attention and promote your brand
+                    effectively.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Custom, scalable, and fully responsive websites built with the latest technologies and striking
+                    aesthetics.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3>App Development</h3>
+                <p>Sleek, responsive, and cross-platform mobile applications that provide excellent user experiences on
+                    any device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <h2>Registration / <span>Contact</span></h2>
+            <div class="underline"></div>
+            <p class="subtitle">Fill out the registration form to start our journey together.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Currently available for freelance works and collaborations. If you have an application you want to
+                    develop, a problem to solve, or just want to say hi, send me a message.</p>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Srilanka,Ampara</li>
+                    <li><i class="fa-solid fa-envelope"></i> muhammadafnrha@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +94 75 47 48 478</li>
+                </ul>
+                <div class="socials">
+                    <!-- உங்களது LinkedIn Username-ஐ இங்கு மாற்றவும் -->
+                    <a href="https://www.linkedin.com/in/mohamed-afnan-2b6561388/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+
+                    <!-- உங்களது GitHub Username-ஐ இங்கு மாற்றவும் -->
+                    <a href="https://github.com/muhammadafnrha-source" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+
+                    <!-- உங்களது WhatsApp Number (Country Code உடன்) இணைக்கப்பட்டுள்ளது -->
+                    <a href="https://wa.me/94754748478" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contactForm" class="glass-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service_type" required>
+                            <option value="">Select a Service</option>
+                            <option value="presentation">Presentation Creation</option>
+                            <option value="final_project">IT Final Projects</option>
+                            <option value="ad_poster">Ad Poster Creation</option>
+                            <option value="web">Web Development</option>
+                            <option value="app">App Development</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Project Details or Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">Submit Request <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h2>TechTrick<span>.</span></h2>
+            <p>High-End Design & Development</p>
+            <p class="copyright">&copy; 2026 TechTrick. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
