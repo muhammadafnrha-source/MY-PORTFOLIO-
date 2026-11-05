@@ -71,18 +71,16 @@
     document.body.classList.add('has-scrollreveal');
     var sr = window.ScrollReveal({ origin: 'bottom', distance: '42px', duration: 850, delay: 120 });
     sr.reveal('.reveal');
-    // sr adds its own classes; mark visible so our CSS does not hide content
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('sr-visible'); });
   }
 
-  /* ---------- Animated skill bars ---------- */
+  /* ---------- Animated skill bars (legacy strengths in About) ---------- */
   var bars = document.querySelectorAll('.progress');
   if ('IntersectionObserver' in window) {
     var barObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          var w = entry.target.getAttribute('data-width') || '100';
-          entry.target.style.width = w + '%';
+          entry.target.style.width = (entry.target.getAttribute('data-width') || '100') + '%';
           barObserver.unobserve(entry.target);
         }
       });
@@ -107,12 +105,30 @@
     });
   });
 
+  /* ---------- Skill category filtering ---------- */
+  var skillFilterBtns = document.querySelectorAll('.skill-filter-btn');
+  var skillCards = document.querySelectorAll('.skill-card');
+  skillFilterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      skillFilterBtns.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
+      var filter = btn.getAttribute('data-sfilter');
+      skillCards.forEach(function (card) {
+        var show = filter === 'all' || card.getAttribute('data-scat') === filter;
+        card.classList.toggle('is-hidden', !show);
+      });
+    });
+  });
+
   /* ---------- Project modal ---------- */
   var modal = document.getElementById('projectModal');
   var modalTitle = document.getElementById('modalTitle');
   var modalCategory = document.getElementById('modalCategory');
   var modalBody = document.getElementById('modalBody');
   var modalStatus = document.getElementById('modalStatus');
+  var modalCover = document.getElementById('modalCover');
+  var modalCoverInitial = document.getElementById('modalCoverInitial');
+  var modalLinks = document.getElementById('modalLinks');
   var modalClose = document.getElementById('modalClose');
   function closeModal() { if (modal) { modal.hidden = true; document.body.style.overflow = ''; } }
   document.querySelectorAll('[data-open-modal]').forEach(function (btn) {
@@ -121,8 +137,25 @@
       if (!modal || !card) return;
       modalTitle.textContent = card.getAttribute('data-title') || 'Project';
       modalCategory.textContent = 'Category: ' + (card.querySelector('.project-tag') ? card.querySelector('.project-tag').textContent : '');
-      modalBody.textContent = card.querySelector('.project-body p') ? card.querySelector('.project-body p').textContent : '';
-      modalStatus.textContent = card.getAttribute('data-status') || '';
+      modalBody.textContent = card.getAttribute('data-desc') || '';
+      modalStatus.textContent = 'Status: ' + (card.getAttribute('data-status') || '');
+      if (modalCoverInitial) {
+        var coverInitial = card.querySelector('.project-tag-cover');
+        modalCoverInitial.textContent = coverInitial ? coverInitial.textContent.trim() : 'P';
+      }
+      if (modalLinks) {
+        modalLinks.innerHTML = '';
+        var live = card.getAttribute('data-live');
+        if (live) {
+          var a = document.createElement('a');
+          a.className = 'btn primary-btn';
+          a.href = live;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.textContent = card.getAttribute('data-live-label') || 'Visit Live Site';
+          modalLinks.appendChild(a);
+        }
+      }
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
       if (modalClose) modalClose.focus();
@@ -191,13 +224,11 @@
   }
 
   if (form) {
-    // Guarded EmailJS init — page still loads if the CDN is unreachable.
     if (window.emailjs && typeof window.emailjs.init === 'function') {
       try { window.emailjs.init(EMAILJS_PUBLIC_KEY); } catch (e) { console.warn('EmailJS init failed:', e); }
     }
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      // Honeypot spam check (client-side only — not a security boundary; server-side relay recommended for real protection).
       var website = document.getElementById('website');
       if (website && website.value.trim() !== '') { return; }
       if (!validate()) { showStatus('Please fix the highlighted fields and try again.', false); return; }
@@ -229,13 +260,11 @@
         window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
           .then(function () { done(true); }, function (err) { console.error('EmailJS Error:', err); done(false); });
       } else {
-        // EmailJS CDN unavailable — surface an actionable error instead of breaking silently.
         showStatus('Email service is currently unavailable. Please email muhammadafnrha@gmail.com or message on WhatsApp.', false);
         submitBtn.innerHTML = originalHTML;
         submitBtn.disabled = false;
       }
     });
-    // Live-clear errors as the user types
     form.querySelectorAll('input,select,textarea').forEach(function (field) {
       field.addEventListener('input', function () {
         var err = field.closest('.form-group') ? field.closest('.form-group').querySelector('.field-error') : null;
